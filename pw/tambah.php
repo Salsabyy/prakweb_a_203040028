@@ -16,7 +16,7 @@ if (isset($_POST['tambah'])) {
 }
 ?>
 
-<!-- Si areel -->
+
 <?php
 function koneksi()
 {
@@ -160,7 +160,7 @@ if (isset($_POST["tambah"])) {
 </head>
 
 <body>
-    <h1>Form Tambah Data Produk</h1>
+    <h1>Form Tambah Data Buku</h1>
     <form action="" method="post">
         <ul>
             <li>
