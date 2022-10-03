@@ -2,7 +2,7 @@
 
 class Produk
 {
-  public $judul,
+  publi c $judul,
     $penulis,
     $penerbit,
     $harga; 
@@ -19,14 +19,22 @@ class Produk
   {
     return "$this->penulis, $this->penerbit";
   }
+
 }
+
+ class CetakInfoProduk {
+    public function cetak ( produk $produk ){
+        $str = "{$produk->judul} | {$produk->getLabel()} (Rp. {$produk->harga})";
+        return $str; 
+    }
+ } 
  
 $produk1 = new Produk("Black clover", "LAyatab", "Shonen Jump", 30000);
 $produk2 = new Produk("Uncharted", "Neil Druckman", "Sony Computer", 250000);
-$produk3 = new Produk("Dragon Ball");
 
-echo "Komik : " . $produk3->getLabel();
+echo "Komik : " . $produk1->getLabel();
 echo "<br>";
-echo "Game : " . $produk4->getLabel();  
-echo "<br>";
-var_dump($produk3);
+echo "Game : " . $produk2->getLabel();  
+
+$infoProduk1 = new CetakInfoProduk();
+echo $infoProduk1->cetak($produk1);
