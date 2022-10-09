@@ -4,7 +4,8 @@
     public function index ()
     {
         $data['judul'] = 'Home';
-        $thisthis->view('templates/header', $data);
+        $data ['nama'] = $this->model('User_model')->getUser();
+        $this->view('templates/header', $data);
         $this->view('home/index';
         $this->view('templates/footer');
     }
